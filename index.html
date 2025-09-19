@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreemad Bhagavad Gita</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+</head>
+<body transition-style="in:circle:top-right">
 
+  <!-- Hero Section with Particles -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <h1 class="anime-title">श्रीमद्भगवद्गीता</h1>
+    <p class="hero-subtitle">The Song of the Divine</p>
+  </section>
+
+  <!-- Splide Carousel -->
+  <section class="splide" aria-label="Beautiful Gita Images">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="Image1.jpg" alt="Image1"></li>
+        <li class="splide__slide"><img src="Image2.jpg" alt="Image2"></li>
+        <li class="splide__slide"><img src="Image3.jpg" alt="Image3"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Packery Grid -->
+  <section class="gallery">
+    <div class="grid">
+      <div class="grid-item"><img src="Image1.jpg" alt=""></div>
+      <div class="grid-item"><img src="Image2.jpg" alt=""></div>
+      <div class="grid-item"><img src="Image3.jpg" alt=""></div>
+      <div class="grid-item"><img src="Image4.jpg" alt=""></div>
+      <div class="grid-item"><img src="Image5.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- Shloka Section -->
+  <section class="shloka-section">
+    <div id="loader" class="hidden">Loading...</div>
+    <div id="errorMessage" class="hidden"><p></p></div>
+    <div id="shlokaCard" class="card hidden">
+      <h2 id="chapter-verse"></h2>
+      <p id="sanskrit-text"></p>
+      <p id="transliteration-text"></p>
+      <p id="translation-text"></p>
+      <small id="author-name"></small>
+    </div>
+    <button id="newShlokaBtn">New Shloka</button>
+  </section>
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/packery@2/dist/packery.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
