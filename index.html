@@ -4,59 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shreemad Bhagavad Gita</title>
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
-  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
   <!-- Splide CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body transition-style="in:circle:top-right">
+<body>
 
-  <!-- Hero Section with Particles -->
-  <section id="hero">
-    <div id="particles-js"></div>
-    <h1 class="anime-title">श्रीमद्भगवद्गीता</h1>
-    <p class="hero-subtitle">The Song of the Divine</p>
-  </section>
+  <div data-parallax="container">
 
-  <!-- Splide Carousel -->
-  <section class="splide" aria-label="Beautiful Gita Images">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide"><img src="Image1.jpg" alt="Image1"></li>
-        <li class="splide__slide"><img src="Image2.jpg" alt="Image2"></li>
-        <li class="splide__slide"><img src="Image3.jpg" alt="Image3"></li>
-      </ul>
-    </div>
-  </section>
+    <!-- HERO SECTION -->
+    <section id="hero" data-parallax="group">
+      
+      <!-- Background Layers -->
+      <div data-parallax="layer" data-image="clouds"></div>
+      <div data-parallax="layer" data-image="battle"></div>
+      <div data-parallax="layer" data-image="krishna"></div>
+      <div data-parallax="layer" data-image="arjuna"></div>
+      <div data-parallax="layer" data-image="chariot"></div>
 
-  <!-- Packery Grid -->
-  <section class="gallery">
-    <div class="grid">
-      <div class="grid-item"><img src="Image1.jpg" alt=""></div>
-      <div class="grid-item"><img src="Image2.jpg" alt=""></div>
-      <div class="grid-item"><img src="Image3.jpg" alt=""></div>
-      <div class="grid-item"><img src="Image4.jpg" alt=""></div>
-      <div class="grid-item"><img src="Image5.jpg" alt=""></div>
-    </div>
-  </section>
+      <!-- Title Layer -->
+      <div class="title" data-parallax="layer" data-parallax-speed="front">
+        <h1 class="anime-title">श्रीमद्भगवद्गीता</h1>
+        <p class="hero-subtitle">The Song of the Divine</p>
+      </div>
 
-  <!-- Shloka Section -->
-  <section class="shloka-section">
-    <div id="loader" class="hidden">Loading...</div>
-    <div id="errorMessage" class="hidden"><p></p></div>
-    <div id="shlokaCard" class="card hidden">
-      <h2 id="chapter-verse"></h2>
-      <p id="sanskrit-text"></p>
-      <p id="transliteration-text"></p>
-      <p id="translation-text"></p>
-      <small id="author-name"></small>
-    </div>
-    <button id="newShlokaBtn">New Shloka</button>
-  </section>
+      <!-- Particles -->
+      <div id="particles-js"></div>
+    </section>
 
-  <!-- External Libraries -->
+    <!-- Splide Carousel -->
+    <section class="splide" aria-label="Beautiful Gita Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="Image1.jpg" alt="Image1"></li>
+          <li class="splide__slide"><img src="Image2.jpg" alt="Image2"></li>
+          <li class="splide__slide"><img src="Image3.jpg" alt="Image3"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery">
+      <div class="grid">
+        <div class="grid-item"><img src="Image1.jpg" alt="Krishna Arjuna"></div>
+        <div class="grid-item"><img src="Image2.jpg" alt="Battle Scene"></div>
+        <div class="grid-item"><img src="Image3.jpg" alt="Divine Vision"></div>
+        <div class="grid-item"><img src="Image4.jpg" alt="Krishna Teaching"></div>
+        <div class="grid-item"><img src="Image5.jpg" alt="Arjuna Bow"></div>
+      </div>
+    </section>
+
+    <!-- Shloka Section -->
+    <section class="shloka-section">
+      <div id="loader" class="hidden">Loading...</div>
+      <div id="errorMessage" class="hidden"><p></p></div>
+      <div id="shlokaCard" class="card hidden">
+        <h2 id="chapter-verse"></h2>
+        <p id="sanskrit-text"></p>
+        <p id="transliteration-text"></p>
+        <p id="translation-text"></p>
+        <small id="author-name"></small>
+      </div>
+      <button id="newShlokaBtn">New Shloka</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <h3 class="ml12">Designed and Developed by Sarang Nayak</h3>
+    </footer>
+
+  </div>
+
+  <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
@@ -64,7 +89,7 @@
   <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  
+
   <!-- Custom Script -->
   <script src="script.js"></script>
 </body>
