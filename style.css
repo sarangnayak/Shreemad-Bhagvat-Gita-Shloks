@@ -1,111 +1,239 @@
-body {
+/* -----------------------------
+   General Reset
+----------------------------- */
+* {
   margin: 0;
-  font-family: "Georgia", serif;
-  background: #faf7f0;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fdfcf7;
+  color: #2b2b2b;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Hero Section */
+/* -----------------------------
+   PARALLAX CONTAINER & GROUP
+----------------------------- */
+[data-parallax="container"] {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  perspective-origin: center;
+}
+
+[data-parallax="group"] {
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+[data-parallax="layer"] {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transform-origin: center;
+}
+
+[data-parallax-speed="front"] { transform: translateZ(90px) scale(0.7); z-index: 5; }
+[data-parallax-speed="slow"]  { transform: translateZ(-300px) scale(2); z-index: 3; }
+[data-parallax-speed="slower"]{ transform: translateZ(-600px) scale(3); z-index: 2; }
+[data-parallax-speed="slowest"]{ transform: translateZ(-900px) scale(4); z-index: 1; }
+
+/* -----------------------------
+   HERO SECTION
+----------------------------- */
 #hero {
   position: relative;
-  height: 100vh;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 6rem 1rem;
+  background: #fff8e7;
   overflow: hidden;
 }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #fffae3, #f5f0d0);
-  z-index: 0;
+/* Title Layer */
+.title {
+  width: 80vw;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  padding: 2rem;
+  background: rgba(253, 252, 247, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translate(-50%, -50%) translateZ(-150px) scale(1.5) skewY(-5deg);
+  text-align: center;
+  z-index: 5;
 }
 
-#hero h1,
-#hero p {
-  position: relative;
-  z-index: 1;
+.title h1 {
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  color: #d97706;
+  line-height: 1.1;
 }
 
-/* Anime Title (looping animation) */
-.anime-title {
-  font-weight: 900;
-  font-size: 3.5em;
-}
-
-/* Subtitle */
-.hero-subtitle {
-  font-size: 1.2em;
+.title p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #444;
   margin-top: 10px;
 }
 
-/* Splide */
-.splide__slide img {
+/* Particles */
+#particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+/* -----------------------------
+   BACKGROUND LAYERS
+----------------------------- */
+[data-image="krishna"] { background-image: url('Image1.jpg'); transform: translateZ(-900px) scale(4) translateX(10%); background-size: contain; background-repeat: no-repeat; background-position: center; }
+[data-image="arjuna"]  { background-image: url('Image2.jpg'); transform: translateZ(-600px) scale(3) translateX(-15%); background-size: contain; background-repeat: no-repeat; background-position: center; }
+[data-image="chariot"] { background-image: url('Image3.jpg'); transform: translateZ(-300px) scale(2) translateY(30%); background-size: cover; }
+[data-image="battle"]  { background-image: url('Image4.jpg'); transform: translateZ(-600px) scale(3); background-size: cover; }
+[data-image="clouds"]  { background-image: url('Image5.jpg'); transform: translateZ(-900px) scale(4); background-size: cover; opacity: 0.7; }
+
+/* -----------------------------
+   SPLIDE CAROUSEL
+----------------------------- */
+.splide {
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.splide img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Gallery Grid */
+/* -----------------------------
+   GALLERY GRID
+----------------------------- */
+.gallery {
+  margin: 3rem auto;
+  max-width: 1100px;
+  padding: 1rem;
+}
+
 .grid {
-  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 .grid-item {
-  width: 200px;
-  margin-bottom: 10px;
+  flex: 1 1 calc(33.333% - 10px);
+  overflow: hidden;
+  border-radius: 10px;
 }
+
 .grid-item img {
   width: 100%;
-  border-radius: 10px;
   display: block;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
 }
 
-/* Shloka Section */
+.grid-item img:hover {
+  transform: scale(1.05);
+}
+
+/* -----------------------------
+   SHLOKA SECTION
+----------------------------- */
 .shloka-section {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
+  background: #fff8e7;
 }
+
 .card {
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 500px;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-button {
-  background: #ff9933;
-  border: none;
+
+#sanskrit-text {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+#translation-text {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+}
+
+#newShlokaBtn {
   padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  color: #fff;
+  font-size: 1rem;
   font-weight: bold;
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-}
-button:hover {
-  background: #cc7a29;
+  transition: background 0.3s ease;
 }
 
-/* Transition CSS */
-@keyframes circle-in-top-right {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(150% at top right);
-  }
-}
-[transition-style="in:circle:top-right"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+#newShlokaBtn:hover {
+  background: #ea580c;
 }
 
+/* -----------------------------
+   HIDDEN CLASS FOR GSAP
+----------------------------- */
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #d97706;
+  color: white;
+}
+
+.ml12 {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* -----------------------------
+   ANIMATED TEXT GLOW
+----------------------------- */
+.animated-text {
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    color: #d97706;
+    text-shadow: 0 0 5px rgba(255, 153, 51, 0.4);
+  }
+  50% {
+    color: #ffb86e;
+    text-shadow: 0 0 15px rgba(255, 153, 51, 0.7), 0 0 25px rgba(255, 153, 51, 0.5);
+  }
 }
