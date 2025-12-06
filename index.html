@@ -2,95 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shreemad Bhagavad Gita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreemad Bhagavad Gita – Divine Wisdom</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@100;300;400&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Splide CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
-  
-  <!-- Custom CSS -->
+  <!-- Icons (for play buttons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <div data-parallax="container">
-
-    <!-- HERO SECTION -->
-    <section id="hero" data-parallax="group">
-      
-      <!-- Background Layers -->
-      <div data-parallax="layer" data-image="clouds"></div>
-      <div data-parallax="layer" data-image="battle"></div>
-      <div data-parallax="layer" data-image="krishna"></div>
-      <div data-parallax="layer" data-image="arjuna"></div>
-      <div data-parallax="layer" data-image="chariot"></div>
-
-      <!-- Title Layer -->
-      <div class="title" data-parallax="layer" data-parallax-speed="front">
-        <h1 class="anime-title">श्रीमद्भगवद्गीता</h1>
+  <!-- HERO -->
+  <header id="hero" class="section section--hero">
+    <div class="section-inner hero-inner">
+      <div class="hero-title-block">
+        <p class="hero-eyebrow">श्लोक संग्रह</p>
+        <h1 class="gita-title tiro-devanagari-hindi-regular">
+          श्रीमद्भगवद्गीता
+        </h1>
         <p class="hero-subtitle">The Song of the Divine</p>
+        <div class="hero-accent"></div>
+        <p class="hero-tagline">
+          A calm, focused reading experience for timeless wisdom.
+        </p>
       </div>
+    </div>
+  </header>
 
-      <!-- Particles -->
-      <div id="particles-js"></div>
+  <main>
+    <!-- CHAPTER NAVIGATION -->
+    <section id="chapter-nav" class="section section--chapter">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 class="section-title">Chapter Navigation</h2>
+          <p class="section-subtitle">
+            Browse chapters to see an overview and follow the journey of the Gita.
+          </p>
+        </header>
+
+        <div class="chapter-controls">
+          <select id="chapterSelect" class="chip-select">
+            <option value="">Select a Chapter</option>
+          </select>
+          <button id="prevChapter" class="chip-select chip-select--button">
+            Previous
+          </button>
+          <button id="nextChapter" class="chip-select chip-select--button">
+            Next
+          </button>
+        </div>
+
+        <div class="progress-tracker">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <article
+          id="chapterContent"
+          class="chapter-content card card--soft hidden"
+        >
+          <h3 id="chapterTitle" class="chapter-title"></h3>
+          <p id="chapterSummary" class="chapter-summary"></p>
+        </article>
+      </div>
     </section>
 
-    <!-- Splide Carousel -->
-    <section class="splide" aria-label="Beautiful Gita Images">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide"><img src="Image1.jpg" alt="Image1"></li>
-          <li class="splide__slide"><img src="Image2.jpg" alt="Image2"></li>
-          <li class="splide__slide"><img src="Image3.jpg" alt="Image3"></li>
-        </ul>
+    <!-- THEME-BASED LEARNING -->
+    <section id="themes" class="section section--themes">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 class="section-title">Theme-Based Learning</h2>
+          <p class="section-subtitle">
+            Explore verses grouped by key paths: Karma, Dharma, Bhakti, and Jnana.
+          </p>
+        </header>
+
+        <div class="theme-filters">
+          <button class="theme-filter active" data-theme="all">All Themes</button>
+          <button class="theme-filter" data-theme="karma">Karma Yoga</button>
+          <button class="theme-filter" data-theme="dharma">Dharma</button>
+          <button class="theme-filter" data-theme="bhakti">Bhakti Yoga</button>
+          <button class="theme-filter" data-theme="jnana">Jnana Yoga</button>
+        </div>
+
+        <div id="themeShlokas" class="theme-shlokas">
+          <!-- populated by JS -->
+        </div>
       </div>
     </section>
 
-    <!-- Gallery Grid -->
-    <section class="gallery">
-      <div class="grid">
-        <div class="grid-item"><img src="Image1.jpg" alt="Krishna Arjuna"></div>
-        <div class="grid-item"><img src="Image2.jpg" alt="Battle Scene"></div>
-        <div class="grid-item"><img src="Image3.jpg" alt="Divine Vision"></div>
-        <div class="grid-item"><img src="Image4.jpg" alt="Krishna Teaching"></div>
-        <div class="grid-item"><img src="Image5.jpg" alt="Arjuna Bow"></div>
+    <!-- SANSKRIT LEARNING TOOLS -->
+    <section id="sanskrit-tools" class="section section--sanskrit">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 class="section-title">Sanskrit Learning Tools</h2>
+          <p class="section-subtitle">
+            Understand each word, hear pronunciations, and get closer to the original text.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <!-- Word-by-word meaning -->
+          <article class="card card--soft">
+            <h3 class="card-title">Word-by-Word Meaning</h3>
+            <div id="wordBreakdown" class="word-breakdown">
+              <!-- populated by JS -->
+            </div>
+            <p id="wordMeaning" class="word-meaning body-text muted">
+              Tap a word to see its meaning and hear the pronunciation.
+            </p>
+          </article>
+
+          <!-- Pronunciation guide -->
+          <article class="card card--soft">
+            <h3 class="card-title">Pronunciation Guide</h3>
+            <p class="body-text">
+              Click on Sanskrit words or use the controls to hear the verse.
+            </p>
+
+            <div class="audio-controls">
+              <button class="button-primary" id="playShloka">
+                <i class="fas fa-play"></i>&nbsp; Play Shloka
+              </button>
+              <button class="button-primary button-primary--ghost" id="slowPlay">
+                <i class="fas fa-forward"></i>&nbsp; Slow Speed
+              </button>
+            </div>
+
+            <div id="devanagariPractice" class="devanagari-practice">
+              <h4 class="card-subtitle">Devanagari Script Practice</h4>
+              <p class="body-text muted">
+                Practice writing these characters on paper as you listen and read.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Shloka Section -->
-    <section class="shloka-section">
-      <div id="loader" class="hidden">Loading...</div>
-      <div id="errorMessage" class="hidden"><p></p></div>
-      <div id="shlokaCard" class="card hidden">
-        <h2 id="chapter-verse"></h2>
-        <p id="sanskrit-text"></p>
-        <p id="transliteration-text"></p>
-        <p id="translation-text"></p>
-        <small id="author-name"></small>
+    <!-- DAILY SHLOKA -->
+    <section id="daily-shloka" class="section section--daily">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 class="section-title">Daily Shloka</h2>
+          <p class="section-subtitle">
+            Receive a random verse from the Bhagavad Gita whenever you need guidance.
+          </p>
+        </header>
+
+        <div class="daily-shloka-inner">
+          <article
+            id="shlokaCard"
+            class="shloka-card card card--soft"
+            aria-live="polite"
+          >
+            <div id="chapter-verse" class="shloka-meta"></div>
+            <p
+              id="sanskrit-text"
+              class="shloka-sanskrit tiro-devanagari-hindi-regular"
+            ></p>
+            <p id="transliteration-text" class="shloka-transliteration"></p>
+            <p id="translation-text" class="shloka-translation body-text"></p>
+            <div class="shloka-footer">
+              <small id="author-name" class="shloka-author"></small>
+            </div>
+          </article>
+
+          <div class="shloka-controls">
+            <button
+              id="newShlokaBtn"
+              class="button-primary"
+              type="button"
+              aria-label="Get a new random shloka from the Bhagavad Gita"
+            >
+              New Shloka
+            </button>
+            <div id="loader" class="loader"></div>
+            <div id="errorMessage" class="error-message" hidden></div>
+          </div>
+        </div>
       </div>
-      <button id="newShlokaBtn">New Shloka</button>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <h3 class="ml12">Designed and Developed by Sarang Nayak</h3>
-    </footer>
+  <!-- FOOTER -->
+  <footer id="site-footer" class="section section--footer">
+    <div class="section-inner footer-inner">
+      <p class="footer-title">Shreemad Bhagavad Gita</p>
+      <p class="footer-subtitle">
+        The eternal guide to life, duty, and spirituality.
+      </p>
+      <p class="footer-credits">
+        Designed with devotion by <span class="footer-highlight">Sarang Nayak</span>
+      </p>
+    </div>
+  </footer>
 
-  </div>
-
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/packery@2/dist/packery.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-  <!-- Custom Script -->
+  <!-- App Logic -->
   <script src="script.js"></script>
 </body>
 </html>
