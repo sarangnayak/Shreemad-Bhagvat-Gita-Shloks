@@ -106,6 +106,28 @@ Future contributors can extend this project:
 - Search functionality
 - Progressive Web App (offline reading)
 
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+   ```bash
+   git checkout -b feature/your-feature
+Commit your changes
+
+Open a Pull Request
+
+👤 Author
+Sarang Nayak
+GitHub: https://github.com/sarangnayak
+
+🙏 Acknowledgement
+All verses belong to the sacred text Shreemad Bhagavad Gita.
+This project is created for educational and learning purposes only.
+
+“You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions.”
+— Bhagavad Gita 2.47
 
 ## 📜 License
 
