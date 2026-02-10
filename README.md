@@ -62,3 +62,23 @@ Shreemad-Bhagvat-Gita-Shloks/
 ├── Image4.jpg
 └── README.md
 ```
+
+
+---
+
+## 🚀 How to Run Locally
+
+### 1. Clone the repository
+```
+git clone https://github.com/sarangnayak/Shreemad-Bhagvat-Gita-Shloks.git
+```
+
+2. Open the project
+```
+cd Shreemad-Bhagvat-Gita-Shloks
+```
+
+3. Run
+
+Simply open: index.html in any browser.
+(No installation required)
