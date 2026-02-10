@@ -80,5 +80,34 @@ cd Shreemad-Bhagvat-Gita-Shloks
 
 3. Run
 
-Simply open: index.html in any browser.
-(No installation required)
+  Simply open: index.html in any browser.
+  (No installation required)
+
+## 🧠 What You Can Learn From This Project
+
+This repository is useful for beginners and intermediate developers to study:
+
+- Structuring a static web app
+- Clean UI layout using CSS
+- DOM manipulation with JavaScript
+- Organizing educational content on the web
+- Creating a deployable GitHub Pages site
+
+
+## 📌 Possible Improvements
+
+Future contributors can extend this project:
+
+- Chapter navigation (Adhyaya wise)
+- Sanskrit + Transliteration + Meaning
+- Audio recitation playback
+- Bookmarking favorite shlokas
+- Dark / Light mode toggle
+- Search functionality
+- Progressive Web App (offline reading)
+
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and distribute it.
